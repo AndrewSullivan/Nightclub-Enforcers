@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float mouseSensitivity = 500f;
 
+    public Animator playerAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +31,12 @@ public class PlayerMovement : MonoBehaviour
 
         playerController.Move(playerMovement * Time.deltaTime);
 
+
         // Player Mouse Movement
         float lookX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
 
         player.Rotate(Vector3.up * lookX);
+
+        playerAnim.SetFloat("Vertical", Input.GetAxis("Vertical"));
     }
 }
