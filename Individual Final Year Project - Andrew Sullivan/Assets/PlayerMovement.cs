@@ -10,6 +10,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform player;
 
+    public Transform playerCam;
+
+    public float turnSmoothing = 0.1f;
+
+    float turnVelocity;
+
     public float mouseSensitivity = 500f;
 
     public Animator playerAnim;
@@ -24,19 +30,26 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // Player Keyboard Movement
-        float playerX = Input.GetAxis("Horizontal") * playerSpeed;
-        float playerZ = Input.GetAxis("Vertical") * playerSpeed;
+        float playerX = Input.GetAxisRaw("Horizontal");
+        float playerZ = Input.GetAxisRaw("Vertical");
 
-        Vector3 playerMovement = transform.forward * playerZ + transform.right * playerX;
+        Vector3 playerMovement = new Vector3(playerX,0f,playerZ).normalized;
+        
+        if(playerMovement.magnitude >= 0.1f)
+        {
+            // This ensures the player faces the direction it is moving in.
+            float playerDirection = Mathf.Atan2(playerMovement.x, playerMovement.z) * Mathf.Rad2Deg + playerCam.eulerAngles.y;
+            float turnDamping = Mathf.SmoothDampAngle(transform.eulerAngles.y, playerDirection, ref turnVelocity, turnSmoothing);
+            transform.rotation = Quaternion.Euler(0f, turnDamping, 0f);
 
-        playerController.Move(playerMovement * Time.deltaTime);
+            // This then makes the player move in the direction it is facing.
+            Vector3 moveInDirection = Quaternion.Euler(0f, playerDirection, 0f) * Vector3.forward;
 
+            playerController.Move(moveInDirection.normalized * playerSpeed * Time.deltaTime);
 
-        // Player Mouse Movement
-        float lookX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-
-        player.Rotate(Vector3.up * lookX);
-
-        playerAnim.SetFloat("Vertical", Input.GetAxis("Vertical"));
+            // This allows for the running animation to be played when the player is moving forward.
+            playerAnim.SetFloat("Vertical", Input.GetAxis("Vertical"));
+        }
+        
     }
 }
