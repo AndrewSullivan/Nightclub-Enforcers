@@ -30,8 +30,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // Player Keyboard Movement
-        float playerX = Input.GetAxisRaw("Horizontal");
-        float playerZ = Input.GetAxisRaw("Vertical");
+        float playerX = Input.GetAxis("Horizontal");
+        float playerZ = Input.GetAxis("Vertical");
 
         Vector3 playerMovement = new Vector3(playerX,0f,playerZ).normalized;
         
