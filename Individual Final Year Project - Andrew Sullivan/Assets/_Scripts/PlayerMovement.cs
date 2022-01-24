@@ -20,7 +20,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        transform.Translate(0f, 0f, Input.GetAxisRaw("Vertical") * playerSpeed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(0f, 0f, Input.GetAxisRaw("Vertical") * playerSpeed * Time.deltaTime);
+        }
 
         playerRotation.x += Input.GetAxis("Mouse X");
         player.localRotation = Quaternion.Euler(0f, playerRotation.x, 0f);
