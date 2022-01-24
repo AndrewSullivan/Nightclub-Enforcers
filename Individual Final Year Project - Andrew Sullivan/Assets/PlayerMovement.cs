@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -27,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         playerRotation.x += Input.GetAxis("Mouse X");
         player.localRotation = Quaternion.Euler(0f, playerRotation.x, 0f);
         
+        // Animations
         playerAnim.SetFloat("PlayerRunning", Input.GetAxisRaw("Vertical"));
         
     }
