@@ -8,6 +8,9 @@ public class RandomTaskSelection : MonoBehaviour
     int selection2;
     int selection3;
 
+    public GameObject bin;
+    public GameObject binSpawnPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +20,10 @@ public class RandomTaskSelection : MonoBehaviour
         selection3 = Random.Range(1, 3);
 
         // Task Selection 1
-        if (selection1 == 1)
+        if (selection1 == 1) // Clean up task
         {
-            Debug.Log("Task1");
+            Instantiate(bin, binSpawnPosition.transform.position, Quaternion.identity); // Instantiates the bin model in the scene as it is needed for the clean up task.
+            Debug.Log("Task1 - Bin is now in scene");
         }
         else if (selection1 == 2)
         {
