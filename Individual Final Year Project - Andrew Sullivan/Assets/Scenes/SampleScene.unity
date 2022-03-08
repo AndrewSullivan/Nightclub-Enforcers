@@ -277,6 +277,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dance Floor Model
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed67d15794a16c347be056688a2dd8a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed67d15794a16c347be056688a2dd8a0, type: 3}
 --- !u!1 &240337892
@@ -782,6 +787,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AICharacter2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cae0b63501c0f9b45b048e3d44810d64,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2660926356113027163, guid: cae0b63501c0f9b45b048e3d44810d64,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -1210,6 +1220,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AICharacter1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cae0b63501c0f9b45b048e3d44810d64,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2660926356113027163, guid: cae0b63501c0f9b45b048e3d44810d64,
         type: 3}
@@ -1795,6 +1810,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bc3a33ebcad765f4cac71fa6131d8154,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bc3a33ebcad765f4cac71fa6131d8154,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -2258,6 +2278,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level Layout
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359412403417544251, guid: c55b150cf29541a4d852af1757e2b090,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8979744200439141225, guid: c55b150cf29541a4d852af1757e2b090,
         type: 3}
