@@ -5,6 +5,12 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
+    RecentlyUsedScenePath-0:
+      value: 22424703114646790c1c4c011822560259241b2f222d69142824127df7ee3d2cfb
+      flags: 0
+    RecentlyUsedScenePath-1:
+      value: 2242470311464678050f05305f0a5114130f563f22213229
+      flags: 0
     UnityRemoteDevice:
       value: 530104565d055a0b405e5c7334750b3137463d727c70766208
       flags: 0
@@ -18,5 +24,7 @@ EditorUserSettings:
   m_SemanticMergeMode: 2
   m_VCShowFailedCheckout: 1
   m_VCOverwriteFailedCheckoutAssets: 1
-  m_VCOverlayIcons: 1
+  m_VCProjectOverlayIcons: 1
+  m_VCHierarchyOverlayIcons: 1
+  m_VCOtherOverlayIcons: 1
   m_VCAllowAsyncUpdate: 0

@@ -4,15 +4,14 @@ public class PlayerMovement : MonoBehaviour
 {
     public float playerSpeed = 5f;
 
-    public Transform player;
-
-    Vector2 playerRotation;
+    CharacterController playerController;
 
     public Animator playerAnim;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerController = GetComponentInParent<CharacterController>();
         Cursor.lockState = CursorLockMode.Confined;
     }
 
@@ -20,16 +19,16 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(0f, 0f, Input.GetAxisRaw("Vertical") * playerSpeed * Time.deltaTime);
-        }
+        float playerX = Input.GetAxis("Horizontal");
+        float playerZ = Input.GetAxis("Vertical");
 
-        playerRotation.x += Input.GetAxis("Mouse X");
-        player.localRotation = Quaternion.Euler(0f, playerRotation.x, 0f);
-        
+        Vector3 playerMovement = transform.right * playerX + transform.forward * playerZ;
+
+        playerController.Move(playerMovement * playerSpeed * Time.deltaTime);
+
         // Animations
-        playerAnim.SetFloat("PlayerRunning", Input.GetAxisRaw("Vertical"));
+        playerAnim.SetFloat("Vertical", playerZ, 0.012f,Time.deltaTime);
+        playerAnim.SetFloat("Horizontal", playerX, 0.012f, Time.deltaTime);
         
     }
 }
