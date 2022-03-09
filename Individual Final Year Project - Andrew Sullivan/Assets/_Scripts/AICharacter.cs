@@ -11,8 +11,9 @@ public class AICharacter : MonoBehaviour
 
     public float distanceFromDanceFloor;
     public float distanceFromBar;
-    public Transform danceFloor;
-    public Transform bar;
+    private GameObject danceFloor;
+    private GameObject bar;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +21,21 @@ public class AICharacter : MonoBehaviour
         aiAnim = GetComponent<Animator>();
         aiNavMeshAgent = GetComponent<NavMeshAgent>();
 
+        danceFloor = GameObject.FindGameObjectWithTag("DanceFloor");
+
+        Transform danceFloorPosition = danceFloor.GetComponent<Transform>();
+
+
+        bar = GameObject.FindGameObjectWithTag("Bar");
+
+        Transform barPosition = bar.GetComponent<Transform>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Get's current animation state of character.
+        /*// Get's current animation state of character.
         AnimatorStateInfo aiAnimStateInfo = aiAnim.GetCurrentAnimatorStateInfo(0);
 
         // Calculates the distance between the player and dance floor, stores the value in a float variable.
@@ -37,12 +47,12 @@ public class AICharacter : MonoBehaviour
         aiAnim.SetFloat("DistFromBar", distanceFromBar); // Sets the float value of the animator parameter "DistFromBar" to whatever value is being stored in distanceFromBar float variable.
         
 
-        /*// Random Number Generator
+        // Random Number Generator
         float randNum = Random.Range(1, 3);
         float randNum2 = Random.Range(3, 4);*/
 
             //Debug.Log(randNum);
-        if (aiAnimStateInfo.IsName("ElizabethWalking")) // If it's current animator state is "Walking", it will set it's destination to the test target objects position.
+        /*if (aiAnimStateInfo.IsName("ElizabethWalking")) // If it's current animator state is "Walking", it will set it's destination to the test target objects position.
         {
             aiNavMeshAgent.SetDestination(danceFloor.position);
             aiNavMeshAgent.isStopped = false;
@@ -57,6 +67,6 @@ public class AICharacter : MonoBehaviour
         if (aiAnimStateInfo.IsName("ElizabethIdle") || aiAnimStateInfo.IsName("ElizabethDancing")) // If it's current animator state is "Idle" or "Dancing", it will not move.
         {
             aiNavMeshAgent.isStopped = true;
-        }
+        }*/
     }
 }
