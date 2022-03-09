@@ -35,7 +35,13 @@ public class AICharacter : MonoBehaviour
         // Calculates the distance between the player and bar, stores the value in a float variable.
         distanceFromBar = Vector3.Distance(bar.position, transform.position);
         aiAnim.SetFloat("DistFromBar", distanceFromBar); // Sets the float value of the animator parameter "DistFromBar" to whatever value is being stored in distanceFromBar float variable.
+        
 
+        /*// Random Number Generator
+        float randNum = Random.Range(1, 3);
+        float randNum2 = Random.Range(3, 4);*/
+
+            //Debug.Log(randNum);
         if (aiAnimStateInfo.IsName("ElizabethWalking")) // If it's current animator state is "Walking", it will set it's destination to the test target objects position.
         {
             aiNavMeshAgent.SetDestination(danceFloor.position);
