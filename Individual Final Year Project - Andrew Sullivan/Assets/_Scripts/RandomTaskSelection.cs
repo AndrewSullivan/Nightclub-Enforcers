@@ -22,12 +22,11 @@ public class RandomTaskSelection : MonoBehaviour
         // Task Selection 1
         if (selection1 == 1) // Clean up task
         {
-            Instantiate(bin, binSpawnPosition.transform.position, Quaternion.identity); // Instantiates the bin model in the scene as it is needed for the clean up task.
-            Debug.Log("Task1 - Bin is now in scene");
+            BinTask();
         }
         else if (selection1 == 2)
         {
-            Debug.Log("Task2");
+            WaiterTask();
         }
         else if (selection1 == 3)
         {
@@ -67,5 +66,16 @@ public class RandomTaskSelection : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void BinTask()
+    {
+        Instantiate(bin, binSpawnPosition.transform.position, Quaternion.identity); // Instantiates the bin model in the scene as it is needed for the clean up task.
+        Debug.Log("Task1 - Bin Task");
+    }
+
+    void WaiterTask()
+    {
+        Debug.Log("Task1 - Waiter Task");
     }
 }
