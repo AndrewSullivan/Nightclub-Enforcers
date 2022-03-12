@@ -514,7 +514,12 @@ PrefabInstance:
     - target: {fileID: 700357942964487157, guid: d7733a0ab0f8c9940beaddbca2fdd18d,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 700357942964487157, guid: d7733a0ab0f8c9940beaddbca2fdd18d,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2854558894659981841, guid: d7733a0ab0f8c9940beaddbca2fdd18d,
         type: 3}
@@ -570,6 +575,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730293954979864152, guid: d7733a0ab0f8c9940beaddbca2fdd18d,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6711697331716281811, guid: d7733a0ab0f8c9940beaddbca2fdd18d,
         type: 3}
@@ -808,6 +818,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3142184438600478446, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -932096567190029277, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b,
         type: 3}
       propertyPath: objectHolder
@@ -877,6 +892,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086586620653021583, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b, type: 3}
@@ -1701,6 +1721,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3142184438600478446, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -932096567190029277, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b,
         type: 3}
       propertyPath: objectHolder
@@ -1779,6 +1804,11 @@ PrefabInstance:
     - target: {fileID: 7086586620653021583, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b,
         type: 3}
       propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086586620653021583, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b,
+        type: 3}
+      propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -1895,6 +1925,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3142184438600478446, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -932096567190029277, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b,
         type: 3}
       propertyPath: objectHolder
@@ -1964,6 +1999,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086586620653021583, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -3620,7 +3660,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5915644530907358809, guid: fa5c53e961e1f0147865ce2bdc64c860, type: 3}
 --- !u!1 &499007134440453044
@@ -19586,7 +19626,7 @@ GameObject:
   - component: {fileID: 195776907497128271}
   - component: {fileID: 4675096531796902746}
   - component: {fileID: 905991030042893542}
-  - component: {fileID: 9204009933410366050}
+  - component: {fileID: 9204009933410366051}
   m_Layer: 0
   m_Name: Box03
   m_TagString: Untagged
@@ -19594,8 +19634,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &9204009933410366050
-MeshCollider:
+--- !u!65 &9204009933410366051
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -19604,7 +19644,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2476992275808665348, guid: fa5c53e961e1f0147865ce2bdc64c860, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.0381522, y: 1.0371134, z: 0.11756869}
+  m_Center: {x: -5.2210972e-17, y: -1.04421944e-16, z: -0.058784343}
