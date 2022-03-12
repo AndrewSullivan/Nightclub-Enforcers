@@ -11,6 +11,9 @@ public class RandomTaskSelection : MonoBehaviour
     public GameObject bin;
     public GameObject binSpawnPosition;
 
+    public GameObject puddle;
+    public GameObject puddleSpawnPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +39,7 @@ public class RandomTaskSelection : MonoBehaviour
         // Task Selection 2
         if (selection2 == 1)
         {
-            Debug.Log("Selection2 - Task1");
+            WetFloorTask();
         }
         else if (selection2 == 2)
         {
@@ -77,5 +80,15 @@ public class RandomTaskSelection : MonoBehaviour
     void WaiterTask()
     {
         Debug.Log("Task1 - Waiter Task");
+    }
+
+    void WetFloorTask()
+    {
+        for(int i = 0; i<5; i++)
+        {
+            Instantiate(puddle, puddleSpawnPosition.transform.position, Quaternion.identity);
+        }
+
+        Debug.Log("Task2 - Wet Floor Task");
     }
 }
