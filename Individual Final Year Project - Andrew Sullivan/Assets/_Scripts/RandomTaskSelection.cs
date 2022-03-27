@@ -14,12 +14,17 @@ public class RandomTaskSelection : MonoBehaviour
     public GameObject puddle;
     public GameObject puddleSpawnPosition;
 
+    public float timer;
+    public float delay;
+    bool stopSpawning = false;
+
     // Start is called before the first frame update
     void Start()
     {
         // Randomly choose a number for each of the 3 integer values.
         selection1 = Random.Range(1, 3);
-        selection2 = Random.Range(1, 3);
+        //selection2 = Random.Range(1, 3);
+        selection2 = 1;
         selection3 = Random.Range(1, 3);
 
         // Task Selection 1
@@ -84,9 +89,17 @@ public class RandomTaskSelection : MonoBehaviour
 
     void WetFloorTask()
     {
-        for(int i = 0; i<5; i++)
+        InvokeRepeating("WetFloorTaskInstantiation", timer, delay);
+    }
+
+    void WetFloorTaskInstantiation()
+    {
+
+        Instantiate(puddle, puddleSpawnPosition.transform.position, Quaternion.identity);
+
+        if (stopSpawning == true)
         {
-            Instantiate(puddle, puddleSpawnPosition.transform.position, Quaternion.identity);
+            CancelInvoke("WetFloorTaskInstantiation"); // This stops the invoke function from being executed.
         }
 
         Debug.Log("Task2 - Wet Floor Task");
