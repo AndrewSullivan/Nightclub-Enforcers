@@ -7,6 +7,7 @@ TagManager:
   - Bottle
   - DanceFloor
   - Bar
+  - Wet Floor Sign
   layers:
   - Default
   - TransparentFX
