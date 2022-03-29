@@ -15,15 +15,17 @@ public class RandomTaskSelection : MonoBehaviour
 
     // Wet Floor Task
     public GameObject puddle;
-    public GameObject puddleSpawnPosition;
+    public GameObject puddleSpawnPosition1;
+    public GameObject puddleSpawnPosition2;
+    public GameObject puddleSpawnPosition3;
 
     public float timer;
     public float delay;
-    bool stopSpawning = false;
+    int currentPuddles = 0;
 
     // Waiter Task
-    public GameObject bottle;
-    public GameObject orderPosition;
+    //public GameObject bottle;
+    //public GameObject orderPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -104,10 +106,25 @@ public class RandomTaskSelection : MonoBehaviour
 
     void WetFloorTaskInstantiation()
     {
+        int randomPos = Random.Range(1, 3);
 
-        Instantiate(puddle, puddleSpawnPosition.transform.position, Quaternion.identity);
+        if (randomPos == 1)
+        {
+            Instantiate(puddle, puddleSpawnPosition1.transform.position, Quaternion.identity);
+            currentPuddles++;
+        }
+        else if (randomPos == 2)
+        {
+            Instantiate(puddle, puddleSpawnPosition2.transform.position, Quaternion.identity);
+            currentPuddles++;
+        }
+        else
+        {
+            Instantiate(puddle, puddleSpawnPosition3.transform.position, Quaternion.identity);
+            currentPuddles++;
+        }
 
-        if (stopSpawning == true)
+        if (currentPuddles == 3)
         {
             CancelInvoke("WetFloorTaskInstantiation"); // This stops the invoke function from being executed.
         }
