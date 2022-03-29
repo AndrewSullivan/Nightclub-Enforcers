@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class RandomTaskSelection : MonoBehaviour
 {
-    int selection1;
-    int selection2;
-    int selection3;
+    // Task Selections
+    public int selection1;
+    public int selection2;
+    public int selection3;
 
+    // Bottle Clean Up Task 
     public GameObject bin;
     public GameObject binSpawnPosition;
 
+    // Wet Floor Task
     public GameObject puddle;
     public GameObject puddleSpawnPosition;
 
@@ -18,14 +21,20 @@ public class RandomTaskSelection : MonoBehaviour
     public float delay;
     bool stopSpawning = false;
 
+    // Waiter Task
+    public GameObject bottle;
+    public GameObject orderPosition;
+
     // Start is called before the first frame update
     void Start()
     {
         // Randomly choose a number for each of the 3 integer values.
-        selection1 = Random.Range(1, 3);
+        //selection1 = Random.Range(1, 3);
+        selection1 = 1;
         //selection2 = Random.Range(1, 3);
         selection2 = 1;
-        selection3 = Random.Range(1, 3);
+        //selection3 = Random.Range(1, 3);
+        selection3 = 1;
 
         // Task Selection 1
         if (selection1 == 1) // Clean up task
@@ -34,7 +43,7 @@ public class RandomTaskSelection : MonoBehaviour
         }
         else if (selection1 == 2)
         {
-            WaiterTask();
+            Debug.Log("Task2");
         }
         else if (selection1 == 3)
         {
@@ -58,7 +67,7 @@ public class RandomTaskSelection : MonoBehaviour
         // Task Selection 3
         if (selection3 == 1)
         {
-            Debug.Log("Selection3 - Task1");
+            WaiterTask();
         }
         else if (selection3 == 2)
         {
@@ -85,6 +94,7 @@ public class RandomTaskSelection : MonoBehaviour
     void WaiterTask()
     {
         Debug.Log("Task1 - Waiter Task");
+        
     }
 
     void WetFloorTask()
