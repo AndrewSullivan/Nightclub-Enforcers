@@ -111,16 +111,19 @@ public class RandomTaskSelection : MonoBehaviour
         if (randomPos == 1)
         {
             Instantiate(puddle, puddleSpawnPosition1.transform.position, Quaternion.identity);
+            Destroy(puddleSpawnPosition1.gameObject); // This prevents spawn overlapping for the puddles.
             currentPuddles++;
         }
         else if (randomPos == 2)
         {
             Instantiate(puddle, puddleSpawnPosition2.transform.position, Quaternion.identity);
+            Destroy(puddleSpawnPosition2.gameObject); // This prevents spawn overlapping for the puddles.
             currentPuddles++;
         }
         else
         {
             Instantiate(puddle, puddleSpawnPosition3.transform.position, Quaternion.identity);
+            Destroy(puddleSpawnPosition3.gameObject); // This prevents spawn overlapping for the puddles.
             currentPuddles++;
         }
 
