@@ -11,7 +11,7 @@ public class BottlePickUp : MonoBehaviour
     {
         distFromBottle = Vector3.Distance(objectHolder.transform.position, this.transform.position); // Calculates the distance between the player and the bottles.
 
-        if(distFromBottle < 5) // If the a bottle is not within 5 meters of the player, they cannot pick it up.
+        if(distFromBottle < 3) // If the a bottle is not within 5 meters of the player, they cannot pick it up.
         {
             if (Input.GetMouseButtonDown(0))
             {
