@@ -24,8 +24,9 @@ public class RandomTaskSelection : MonoBehaviour
     int currentPuddles = 0;
 
     // Waiter Task
-    //public GameObject bottle;
-    //public GameObject orderPosition;
+    public List<GameObject> drinks = new List<GameObject>();
+    public List<Vector3> spawns = new List<Vector3>();
+    public GameObject tableNum2;
 
     // Start is called before the first frame update
     void Start()
@@ -95,7 +96,18 @@ public class RandomTaskSelection : MonoBehaviour
 
     void WaiterTask()
     {
-        Debug.Log("Task1 - Waiter Task");
+
+        GameObject spawnDrinks = drinks[Random.Range(0, drinks.Count)]; // Randomly chooses a drink prefab 
+        Vector3 spawnPositions = spawns[Random.Range(0, spawns.Count)];
+        Instantiate(spawnDrinks, spawnPositions, Quaternion.identity); // Instantiates the chosen drink prefab in the specified position. 
+        //Destroy(gameObject);
+
+        if(spawnDrinks.transform.position == tableNum2.transform.position)
+        {
+            Debug.Log("Order Complete!");
+        }
+
+        Debug.Log("Take to table number 2");
         
     }
 

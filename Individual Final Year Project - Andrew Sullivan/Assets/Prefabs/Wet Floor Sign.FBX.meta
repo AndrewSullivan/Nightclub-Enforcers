@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5f0fe106d19810b49866a37028227f50
+guid: 353ee2f464e586e46b263aa179b5ee30
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material #25
-    second: {fileID: 2100000, guid: 72177ebda482af344aafbbea3d1ef0c7, type: 2}
+      name: Material #37
+    second: {fileID: 2100000, guid: a59f0026f4675cd498777fe515099231, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wetfloor
+    second: {fileID: 2100000, guid: 065992de35764bc4fa35189e937c25e3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
