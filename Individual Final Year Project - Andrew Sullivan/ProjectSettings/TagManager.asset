@@ -8,6 +8,7 @@ TagManager:
   - DanceFloor
   - Bar
   - Wet Floor Sign
+  - AI
   layers:
   - Default
   - TransparentFX

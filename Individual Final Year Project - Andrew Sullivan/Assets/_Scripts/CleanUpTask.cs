@@ -15,7 +15,7 @@ public class CleanUpTask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(bottlesBinned == 1)
+        if(bottlesBinned == 5)
         {
             Debug.Log("Congratulations, you have cleared up all the left over bottles!"); // If 5 bottles are dropped into the bin, it will send a message to the console.
         }

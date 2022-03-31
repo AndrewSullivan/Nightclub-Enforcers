@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class BottlePickUp : MonoBehaviour
 {
-    public Transform objectHolder;
+    Transform objectHolder;
+
+    void Start()
+    {
+        objectHolder = GameObject.Find("Object Holder").GetComponent<Transform>();
+    }
 
     private void OnMouseDown()
     {
