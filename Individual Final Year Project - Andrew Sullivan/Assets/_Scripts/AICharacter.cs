@@ -24,9 +24,7 @@ public class AICharacter : MonoBehaviour
 
         isFighting = true;
 
-        danceFloor = GameObject.FindGameObjectWithTag("DanceFloor");
-
-        //Transform danceFloorPosition = danceFloor.GetComponent<Transform>();
+        danceFloor = GameObject.Find("Dance Floor Model");
 
 
        // bar = GameObject.FindGameObjectWithTag("Bar");
@@ -41,11 +39,11 @@ public class AICharacter : MonoBehaviour
         // Get's current animation state of character.
         AnimatorStateInfo aiAnimStateInfo = aiAnim.GetCurrentAnimatorStateInfo(0);
 
-        // Calculates the distance between the player and dance floor, stores the value in a float variable.
+        /*// Calculates the distance between the player and dance floor, stores the value in a float variable.
         distanceFromDanceFloor = Vector3.Distance(danceFloor.transform.position, transform.position);
         aiAnim.SetFloat("DistFromDanceFloor", distanceFromDanceFloor); // Sets the float value of the animator parameter "DistFromDanceFloor" to whatever value is being stored in distanceFromDanceFloor float variable.
 
-        /*// Calculates the distance between the player and bar, stores the value in a float variable.
+        // Calculates the distance between the player and bar, stores the value in a float variable.
         distanceFromBar = Vector3.Distance(bar.position, transform.position);
         aiAnim.SetFloat("DistFromBar", distanceFromBar); // Sets the float value of the animator parameter "DistFromBar" to whatever value is being stored in distanceFromBar float variable.
         */
@@ -57,14 +55,14 @@ public class AICharacter : MonoBehaviour
              aiNavMeshAgent.isStopped = false;
          }
 
-        if (aiAnimStateInfo.IsName("Fighting"))
+        /*if (aiAnimStateInfo.IsName("Fighting"))
         {
             aiNavMeshAgent.isStopped = true;
             aiAnim.SetBool("isFighting", true);
 
             isFighting = true;
             
-        }
+        }*/
 
         /*if (aiAnimStateInfo.IsName("ElizabethWalking2")) // If it's current animator state is "Walking", it will set it's destination to the test target objects position.
         {
