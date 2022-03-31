@@ -15,13 +15,10 @@ public class RandomTaskSelection : MonoBehaviour
 
     // Wet Floor Task
     public GameObject puddle;
-    public GameObject puddleSpawnPosition1;
-    public GameObject puddleSpawnPosition2;
-    public GameObject puddleSpawnPosition3;
-
+    public List<GameObject> puddlePos = new List<GameObject>();
     public float timer;
     public float delay;
-    int currentPuddles = 0;
+    int numOfPuddles = 0;
 
     // Waiter Task
     public List<GameObject> drinks = new List<GameObject>();
@@ -113,37 +110,19 @@ public class RandomTaskSelection : MonoBehaviour
 
     void WetFloorTask()
     {
-        InvokeRepeating("WetFloorTaskInstantiation", timer, delay);
+        InvokeRepeating("PuddleInstantiation", timer, delay);
+
     }
 
-    void WetFloorTaskInstantiation()
+    void PuddleInstantiation()
     {
-        int randomPos = Random.Range(1, 3);
+        GameObject spawnPos = puddlePos[Random.Range(0, puddlePos.Count)];
+        Instantiate(puddle, spawnPos.transform.position, Quaternion.identity);
+        Destroy(spawnPos.gameObject);
 
-        if (randomPos == 1)
+        if (numOfPuddles == 3)
         {
-            Instantiate(puddle, puddleSpawnPosition1.transform.position, Quaternion.identity);
-            Destroy(puddleSpawnPosition1.gameObject); // This prevents spawn overlapping for the puddles.
-            currentPuddles++;
+            CancelInvoke("PuddleInstantiation");
         }
-        else if (randomPos == 2)
-        {
-            Instantiate(puddle, puddleSpawnPosition2.transform.position, Quaternion.identity);
-            Destroy(puddleSpawnPosition2.gameObject); // This prevents spawn overlapping for the puddles.
-            currentPuddles++;
-        }
-        else
-        {
-            Instantiate(puddle, puddleSpawnPosition3.transform.position, Quaternion.identity);
-            Destroy(puddleSpawnPosition3.gameObject); // This prevents spawn overlapping for the puddles.
-            currentPuddles++;
-        }
-
-        if (currentPuddles == 3)
-        {
-            CancelInvoke("WetFloorTaskInstantiation"); // This stops the invoke function from being executed.
-        }
-
-        Debug.Log("Task2 - Wet Floor Task");
     }
 }
