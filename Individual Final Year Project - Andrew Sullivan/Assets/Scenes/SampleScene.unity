@@ -184,54 +184,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &116858197
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 116858199}
-  - component: {fileID: 116858198}
-  m_Layer: 0
-  m_Name: DrinkSpawn3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &116858198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116858197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93d1e300d5f908e44b290869616f18ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drinks:
-  - {fileID: 2909141149624483576, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b, type: 3}
-  - {fileID: 677949065181056518, guid: c177edfdf0964e44cac210b77c9ef507, type: 3}
-  - {fileID: 8150181452578194477, guid: 3aaf7421292dbf0479cfe6804b0e9dd3, type: 3}
-  - {fileID: 2494314821789669023, guid: 253a4ec5fe6399448af1e20ead1e87fe, type: 3}
---- !u!4 &116858199
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116858197}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.33, y: 9.42, z: -154.42}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &129342856
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +291,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &315350649
 GameObject:
@@ -673,84 +625,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &668797778
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 668797779}
-  m_Layer: 0
-  m_Name: Table 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &668797779
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668797778}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 73.83, y: 9.42, z: -153.67}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &688625874
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 688625876}
-  - component: {fileID: 688625875}
-  m_Layer: 0
-  m_Name: DrinkSpawn1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &688625875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688625874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93d1e300d5f908e44b290869616f18ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drinks:
-  - {fileID: 2909141149624483576, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b, type: 3}
-  - {fileID: 677949065181056518, guid: c177edfdf0964e44cac210b77c9ef507, type: 3}
-  - {fileID: 8150181452578194477, guid: 3aaf7421292dbf0479cfe6804b0e9dd3, type: 3}
-  - {fileID: 2494314821789669023, guid: 253a4ec5fe6399448af1e20ead1e87fe, type: 3}
---- !u!4 &688625876
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688625874}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.33, y: 9.42, z: -157.42}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &694092531
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,36 +654,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &698958505
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 698958506}
-  m_Layer: 0
-  m_Name: Table 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &698958506
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698958505}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 50.08, y: 9.42, z: -151.67}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &699092979
 GameObject:
@@ -966,7 +810,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 353ee2f464e586e46b263aa179b5ee30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 353ee2f464e586e46b263aa179b5ee30,
         type: 3}
@@ -1096,7 +940,7 @@ GameObject:
   - component: {fileID: 943906440}
   - component: {fileID: 943906439}
   m_Layer: 0
-  m_Name: DrinkSpawn5
+  m_Name: DrinkSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1119,6 +963,15 @@ MonoBehaviour:
   - {fileID: 677949065181056518, guid: c177edfdf0964e44cac210b77c9ef507, type: 3}
   - {fileID: 8150181452578194477, guid: 3aaf7421292dbf0479cfe6804b0e9dd3, type: 3}
   - {fileID: 2494314821789669023, guid: 253a4ec5fe6399448af1e20ead1e87fe, type: 3}
+  tables:
+  - {fileID: 1389157705318946145, guid: ef8b36b3d7fad474d8dab50d0331a0a1, type: 3}
+  - {fileID: 5266527514118517469, guid: 660607126c971e849882b411d0f9ea86, type: 3}
+  randomDrink: 0
+  chosenDrink: {fileID: 0}
+  tableNum: 
+  chosenTable: {fileID: 0}
+  table1Pos: {fileID: 1539617391}
+  table2Pos: {fileID: 1177009638}
 --- !u!4 &943906440
 Transform:
   m_ObjectHideFlags: 0
@@ -1131,7 +984,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &989242771
 PrefabInstance:
@@ -1428,7 +1281,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1167365253
+--- !u!1 &1177009638
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1436,45 +1289,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1167365255}
-  - component: {fileID: 1167365254}
+  - component: {fileID: 1177009639}
   m_Layer: 0
-  m_Name: DrinkSpawn2
+  m_Name: Table2Pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1167365254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167365253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93d1e300d5f908e44b290869616f18ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drinks:
-  - {fileID: 2909141149624483576, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b, type: 3}
-  - {fileID: 677949065181056518, guid: c177edfdf0964e44cac210b77c9ef507, type: 3}
-  - {fileID: 8150181452578194477, guid: 3aaf7421292dbf0479cfe6804b0e9dd3, type: 3}
-  - {fileID: 2494314821789669023, guid: 253a4ec5fe6399448af1e20ead1e87fe, type: 3}
---- !u!4 &1167365255
+--- !u!4 &1177009639
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167365253}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.33, y: 9.42, z: -155.42}
+  m_GameObject: {fileID: 1177009638}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 66.33432, y: 11.735591, z: -136.02895}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1261353659
 GameObject:
@@ -1531,7 +1366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1428337187
 GameObject:
@@ -1741,7 +1576,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1485462012
 GameObject:
@@ -1807,7 +1642,37 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1539617391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1539617392}
+  m_Layer: 0
+  m_Name: Table1Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1539617392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539617391}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.58432, y: 11.735591, z: -136.02895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1632637974
 GameObject:
@@ -1863,7 +1728,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1632637977
 MonoBehaviour:
@@ -1969,54 +1834,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1080766902}
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1902706780
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1902706782}
-  - component: {fileID: 1902706781}
-  m_Layer: 0
-  m_Name: DrinkSpawn4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1902706781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902706780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93d1e300d5f908e44b290869616f18ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drinks:
-  - {fileID: 2909141149624483576, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b, type: 3}
-  - {fileID: 677949065181056518, guid: c177edfdf0964e44cac210b77c9ef507, type: 3}
-  - {fileID: 8150181452578194477, guid: 3aaf7421292dbf0479cfe6804b0e9dd3, type: 3}
-  - {fileID: 2494314821789669023, guid: 253a4ec5fe6399448af1e20ead1e87fe, type: 3}
---- !u!4 &1902706782
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902706780}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.33, y: 9.42, z: -160.42}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -24,7 +24,7 @@ public class AICharacter : MonoBehaviour
 
         isFighting = true;
 
-        danceFloor = GameObject.Find("Dance Floor Model");
+        danceFloor = GameObject.Find("Dance Floor Model"); 
 
 
        // bar = GameObject.FindGameObjectWithTag("Bar");
