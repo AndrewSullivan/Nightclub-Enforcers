@@ -25,6 +25,10 @@ public class GameTimer : MonoBehaviour
         {
             timerFinished();
         }
+        else if(timer != 0f)
+        {
+            Time.timeScale = 1;
+        }
     }
 
     private void FixedUpdate()
@@ -35,5 +39,6 @@ public class GameTimer : MonoBehaviour
     void timerFinished()
     {
         timerText.text = "Time Ended";
+        Time.timeScale = 0;
     }
 }
