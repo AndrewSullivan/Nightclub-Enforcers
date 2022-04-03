@@ -11,6 +11,8 @@ public class WetFloorTask : MonoBehaviour
 
     int numOfClicks = 0;
 
+    public int puddlesCleaned = 0;
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -34,6 +36,7 @@ public class WetFloorTask : MonoBehaviour
         if (numOfClicks == 4)
         {
             Destroy(this.gameObject);
+            puddlesCleaned++;
         }
     }
 

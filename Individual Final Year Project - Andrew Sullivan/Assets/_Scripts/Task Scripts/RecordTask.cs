@@ -11,6 +11,8 @@ public class RecordTask : MonoBehaviour
     public GameObject chosenRecord;
     public GameObject decksTrigger;
     public GameObject decksPos;
+    public string recordName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,23 @@ public class RecordTask : MonoBehaviour
     {
         randomRecord = Random.Range(0, records.Length);
         chosenRecord = Instantiate(records[randomRecord], transform.position, Quaternion.identity);
+
+        if(randomRecord == 0)
+        {
+            recordName = "Blue Record";
+        }
+        else if(randomRecord == 1)
+        {
+            recordName = "Red Record";
+        }
+        else if (randomRecord == 2)
+        {
+            recordName = "Green Record";
+        }
+        else if (randomRecord == 3)
+        {
+            recordName = "Purple Record";
+        }
     }
 
     void SpawnDecksTrigger()

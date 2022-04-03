@@ -10,6 +10,7 @@ public class DrinkSpawner : MonoBehaviour
     public int randomDrink;
     public GameObject chosenDrink;
     public string tableNum;
+    public string drinkName;
     public GameObject chosenTable;
     public GameObject table1Pos, table2Pos;
 
@@ -24,6 +25,24 @@ public class DrinkSpawner : MonoBehaviour
     {
         randomDrink = Random.Range(0, drinks.Length);
         chosenDrink = Instantiate(drinks[randomDrink], transform.position, Quaternion.identity);
+
+        // These if statements below have been added to aid the task UI.
+        if(randomDrink == 0)
+        {
+            drinkName = "Blue Drink";
+        }
+        else if(randomDrink == 1)
+        {
+            drinkName = "Red Drink";
+        }
+        else if(randomDrink == 2)
+        {
+            drinkName = "Green Drink";
+        }
+        else if(randomDrink == 3)
+        {
+            drinkName = "Purple Drink";
+        }
     }
 
     void ChooseTable()

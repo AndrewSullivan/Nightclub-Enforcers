@@ -9,6 +9,8 @@ TagManager:
   - Bar
   - Wet Floor Sign
   - AI
+  - Puddle
+  - UI
   layers:
   - Default
   - TransparentFX

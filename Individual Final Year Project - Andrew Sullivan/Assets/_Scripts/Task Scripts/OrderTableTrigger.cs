@@ -9,13 +9,13 @@ public class OrderTableTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        drink = GameObject.Find("DrinkSpawn").GetComponent<DrinkSpawner>();   
+        drink = GameObject.Find("DrinkSpawn").GetComponent<DrinkSpawner>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
