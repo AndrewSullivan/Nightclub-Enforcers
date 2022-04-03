@@ -8,7 +8,7 @@ public class AIScript : MonoBehaviour
     NavMeshAgent aiAgent;
     Transform danceFloor;
     Transform bar;
-    Transform playerTransform;
+    //Transform playerTransform;
     Animator aiAnim;
 
     public float distanceDanceFloor;
@@ -26,7 +26,7 @@ public class AIScript : MonoBehaviour
 
         danceFloor = GameObject.Find("Dance Floor Model").GetComponent<Transform>();
         bar = GameObject.Find("BarPosition").GetComponent<Transform>();
-        playerTransform = GameObject.Find("Player").GetComponent<Transform>();
+        //playerTransform = GameObject.Find("Player").GetComponent<Transform>();
 
         randChoice = Random.Range(0, 3);
         //randChoice2 = Random.Range(0, 2);
@@ -46,11 +46,11 @@ public class AIScript : MonoBehaviour
             aiAgent.SetDestination(bar.position);
             aiAnim.SetInteger("Random Choice 1", randChoice);
         }
-        else
+        /*else
         {
             aiAgent.SetDestination(playerTransform.position);
             aiAnim.SetInteger("Random Choice 1", randChoice);
-        }
+        }*/
 
         /*if (aiAnim.GetCurrentAnimatorStateInfo(0).IsName("Fighting"))
         {
