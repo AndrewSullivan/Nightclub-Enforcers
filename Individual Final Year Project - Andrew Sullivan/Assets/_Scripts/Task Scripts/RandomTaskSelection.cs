@@ -98,7 +98,7 @@ public class RandomTaskSelection : MonoBehaviour
         Destroy(spawnPos.gameObject);
         numOfPuddles++;
 
-        if (numOfPuddles == 2)
+        if (numOfPuddles == 3)
         {
             CancelInvoke("PuddleInstantiation");
         }

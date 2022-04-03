@@ -6,10 +6,13 @@ public class RecordChecker : MonoBehaviour
 {
     RecordTask record;
 
+    GameWin gameWin;
+
     // Start is called before the first frame update
     void Start()
     {
         record = GameObject.Find("RecordSpawner").GetComponent<RecordTask>();
+        gameWin = GameObject.Find("WinSystem").GetComponent<GameWin>();
     }
 
     // Update is called once per frame
@@ -23,6 +26,7 @@ public class RecordChecker : MonoBehaviour
         if (other.gameObject.tag == record.chosenRecord.gameObject.tag)
         {
             Destroy(other.gameObject);
+            gameWin.tasksComplete++;
             Debug.Log("Playing correct record!");
         }
     }

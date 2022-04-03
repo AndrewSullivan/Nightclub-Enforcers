@@ -11,11 +11,16 @@ public class WetFloorTask : MonoBehaviour
 
     int numOfClicks = 0;
 
-    public int puddlesCleaned = 0;
+    public int puddlesCleaned;
+
+    GameWin gameWin;
+
+    bool complete;
 
     void Start()
     {
         player = GameObject.Find("Player");
+        gameWin = GameObject.Find("WinSystem").GetComponent<GameWin>();
     }
 
     // Update is called once per frame
@@ -37,6 +42,17 @@ public class WetFloorTask : MonoBehaviour
         {
             Destroy(this.gameObject);
             puddlesCleaned++;
+        }
+
+        if(puddlesCleaned == 3)
+        {
+            complete = true;
+        }
+
+        if (complete == true)
+        {
+            gameWin.tasksComplete = gameWin.tasksComplete + 1;
+            Destroy(this.gameObject); // This is to prevent it from constantly adding to the task complete value every millisecond.
         }
     }
 

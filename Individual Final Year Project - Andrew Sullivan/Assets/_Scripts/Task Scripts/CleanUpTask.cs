@@ -11,12 +11,16 @@ public class CleanUpTask : MonoBehaviour
     public GameObject[] bottles;
     public List<GameObject> bottleSpawns = new List<GameObject>();
 
+    GameWin gameWin;
+
     //UI uiScript;
 
     // Start is called before the first frame update
     void Start()
     {
-        bottlesBinned = 5;
+        bottlesBinned = 0;
+
+        gameWin = GameObject.Find("WinSystem").GetComponent<GameWin>();
 
         for (int i = 0; i < 5; i++)
         {
@@ -38,6 +42,8 @@ public class CleanUpTask : MonoBehaviour
         {
             Debug.Log("Congratulations, you have cleared up all the left over bottles!"); // If 5 bottles are dropped into the bin, it will send a message to the console.
             //uiScript.subHeading1.text = "Complete!";
+            gameWin.tasksComplete = gameWin.tasksComplete + 1; 
+            Destroy(this.gameObject); // This is to prevent it from constantly adding to the task complete value every millisecond.
         }
     }
 
