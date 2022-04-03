@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ElizabethWalking 0
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3634070514128872428}
@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d69391c0d8f30cd4fbc1a454b05c031e, type: 2}
+  m_Motion: {fileID: 7400000, guid: e9bad16e981787b47bf01a5f0ce99cc6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -35,7 +35,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ElizabethDrunk
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 9084484446632788034}
@@ -112,7 +112,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ElizabethIdle
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5077612078764724870}
@@ -126,8 +126,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: cae0b63501c0f9b45b048e3d44810d64,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 19afe1a9dd7f9144ea9f6c7d9a2f1f22, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -197,19 +196,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: DistFromBar
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Random Choice 1
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -231,7 +230,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ElizabethDancing
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7203419486560244348}
@@ -331,7 +330,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ElizabethWalking
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6170355832424282735}
@@ -344,7 +343,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d69391c0d8f30cd4fbc1a454b05c031e, type: 2}
+  m_Motion: {fileID: 7400000, guid: e9bad16e981787b47bf01a5f0ce99cc6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

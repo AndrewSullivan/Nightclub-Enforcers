@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 367605996}
-  ai: {fileID: 3350716902081749051, guid: b57712261d13db24db4294d76b17c426, type: 3}
+  ai: {fileID: 6363115849894017431, guid: c49443bec6116a64a86e517de859e660, type: 3}
   timer: 1
   delay: 10
   numOfAi: 0
@@ -3431,6 +3431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
+  playerGravity: -9.81
   playerAnim: {fileID: 2056746573}
 --- !u!54 &2056746572
 Rigidbody:
