@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class GameWin : MonoBehaviour
 {
-    public int tasksComplete = 0;
+    public int tasksComplete;
+
+    public GameObject gameWinCanvas;
 
     // Update is called once per frame
     void Update()
     {
         if(tasksComplete >= 4)
         {
-            Application.Quit();
-            Debug.Log("All tasks completed");
+            gameWinCanvas.SetActive(true);
+
+            Cursor.lockState = CursorLockMode.Confined;
         }
     }
 }
