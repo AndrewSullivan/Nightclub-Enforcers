@@ -96,8 +96,9 @@ public class RandomTaskSelection : MonoBehaviour
         GameObject spawnPos = puddlePos[Random.Range(0, puddlePos.Count)];
         Instantiate(puddle, spawnPos.transform.position, Quaternion.identity);
         Destroy(spawnPos.gameObject);
+        numOfPuddles++;
 
-        if (numOfPuddles == 3)
+        if (numOfPuddles == 2)
         {
             CancelInvoke("PuddleInstantiation");
         }

@@ -6,14 +6,13 @@ using UnityEngine.AI;
 public class AIScript : MonoBehaviour
 {
     NavMeshAgent aiAgent;
-    public Transform danceFloor;
-    public Transform bar;
-    public Animator aiAnim;
+    Transform danceFloor;
+    Transform bar;
+    Transform playerTransform;
+    Animator aiAnim;
 
     public float distanceDanceFloor;
     public float distanceBar;
-    bool isMoving;
-    bool isIdle;
     public int randChoice;
     //public int randChoice2;
 
@@ -21,9 +20,14 @@ public class AIScript : MonoBehaviour
     void Start()
     {
         aiAgent = GetComponent<NavMeshAgent>();
-        //aiAnim = GetComponent<Animator>();
 
-        randChoice = Random.Range(0, 2);
+        aiAnim = GetComponent<Animator>();
+
+        danceFloor = GameObject.Find("Dance Floor Model").GetComponent<Transform>();
+        bar = GameObject.Find("BarPosition").GetComponent<Transform>();
+        playerTransform = GameObject.Find("Player").GetComponent<Transform>();
+
+        randChoice = Random.Range(0, 3);
         //randChoice2 = Random.Range(0, 2);
     }
 
@@ -39,6 +43,11 @@ public class AIScript : MonoBehaviour
         else if(randChoice == 1)
         {
             aiAgent.SetDestination(bar.position);
+            aiAnim.SetInteger("Random Choice 1", randChoice);
+        }
+        else
+        {
+            aiAgent.SetDestination(playerTransform.position);
             aiAnim.SetInteger("Random Choice 1", randChoice);
         }
 
@@ -84,4 +93,5 @@ public class AIScript : MonoBehaviour
             aiAnim.Play("ElizabethIdle");
         }*/
     }
+
 }

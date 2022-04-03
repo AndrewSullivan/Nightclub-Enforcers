@@ -10,7 +10,6 @@ public class DrinkSpawner : MonoBehaviour
     public int randomDrink;
     public GameObject chosenDrink;
     public string tableNum;
-    public string drinkName;
     public GameObject chosenTable;
     public GameObject table1Pos, table2Pos;
 
@@ -29,19 +28,19 @@ public class DrinkSpawner : MonoBehaviour
         // These if statements below have been added to aid the task UI.
         if(randomDrink == 0)
         {
-            drinkName = "Blue Drink";
+            chosenDrink.name = "Blue Drink";
         }
         else if(randomDrink == 1)
         {
-            drinkName = "Red Drink";
+            chosenDrink.name = "Red Drink";
         }
         else if(randomDrink == 2)
         {
-            drinkName = "Green Drink";
+            chosenDrink.name = "Green Drink";
         }
         else if(randomDrink == 3)
         {
-            drinkName = "Purple Drink";
+            chosenDrink.name = "Purple Drink";
         }
     }
 
@@ -53,13 +52,15 @@ public class DrinkSpawner : MonoBehaviour
         {
             tableNum = "Table 1";
             chosenTable = Instantiate(tables[randomTable], table1Pos.transform.position, Quaternion.identity);
+            chosenTable.name = tableNum;
         }
         else
         {
             tableNum = "Table 2";
             chosenTable = Instantiate(tables[randomTable], table2Pos.transform.position, Quaternion.identity);
+            chosenTable.name = tableNum;
         }
 
-        Debug.Log("Take "+chosenDrink+"to "+tableNum);
+        Debug.Log("Take "+chosenDrink.name+" to "+chosenTable.name);
     }
 }

@@ -11,6 +11,7 @@ public class UI : MonoBehaviour
     public GameObject endGameCanvas;
 
     DrinkSpawner drinkTask;
+    OrderTableTrigger drinkOrder;
     RecordTask recordTask;
 
     GameTimer timer;
@@ -43,7 +44,7 @@ public class UI : MonoBehaviour
         subHeading2.text = "Cleaned up all the puddles";
 
         // Drink Order Task
-        subHeading3.text = "Take " + drinkTask.drinkName + " to " + drinkTask.tableNum;
+        subHeading3.text = "Take " + drinkTask.chosenDrink.name + " to " + drinkTask.tableNum;
 
         // Record Task
         subHeading4.text = "Play " + recordTask.recordName + " on the DJ decks";
