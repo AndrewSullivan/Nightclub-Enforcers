@@ -13,6 +13,7 @@ public class UI : MonoBehaviour
     DrinkSpawner drinkTask;
     OrderTableTrigger drinkOrder;
     RecordTask recordTask;
+    //AIScript aiScript;
 
     GameTimer timer;
 
@@ -23,11 +24,13 @@ public class UI : MonoBehaviour
         task2.text = "Wet Floor Task";
         task3.text = "Drinks Order Task";
         task4.text = "Vinyl Record Task";
+        //task5.text = "Stop Fights";
 
         subHeading1.text = "";
         subHeading2.text = "";
         subHeading3.text = "";
         subHeading4.text = "";
+        //subHeading5.text = "";
 
         drinkTask = GameObject.Find("DrinkSpawn").GetComponent<DrinkSpawner>();
         recordTask = GameObject.Find("RecordSpawner").GetComponent<RecordTask>();
@@ -37,6 +40,8 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //aiScript = GameObject.Find("AI").GetComponent<AIScript>();
+
         // Bottle Clean Up Task
         subHeading1.text = "Thrown away all bottles on the bar stool";
 
@@ -48,6 +53,9 @@ public class UI : MonoBehaviour
 
         // Record Task
         subHeading4.text = "Play " + recordTask.recordName + " on the DJ decks";
+
+        /*// Fights
+        subHeading5.text = "Stop " + aiScript.numOfFights + " fights";*/
 
         if(timer.timer <= 0f)
         {

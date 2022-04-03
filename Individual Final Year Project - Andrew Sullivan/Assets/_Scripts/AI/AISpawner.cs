@@ -21,7 +21,8 @@ public class AISpawner : MonoBehaviour
 
     void SpawnAI()
     {
-        Instantiate(ai, spawn.transform.position, Quaternion.identity);
+        GameObject aiSpawned = Instantiate(ai, spawn.transform.position, Quaternion.identity);
+        aiSpawned.name = "AI";
         numOfAi++;
 
         if (numOfAi >= 5)

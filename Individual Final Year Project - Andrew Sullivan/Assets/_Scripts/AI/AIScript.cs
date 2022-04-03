@@ -19,6 +19,7 @@ public class AIScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         aiAgent = GetComponent<NavMeshAgent>();
 
         aiAnim = GetComponent<Animator>();
@@ -50,6 +51,11 @@ public class AIScript : MonoBehaviour
             aiAgent.SetDestination(playerTransform.position);
             aiAnim.SetInteger("Random Choice 1", randChoice);
         }
+
+        /*if (aiAnim.GetCurrentAnimatorStateInfo(0).IsName("Fighting"))
+        {
+            numOfFights++;
+        }*/
 
         /*if (randChoice2 == 0)
         {
