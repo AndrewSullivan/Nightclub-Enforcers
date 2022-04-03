@@ -8,8 +8,12 @@ public class UI : MonoBehaviour
     public Text task1, task2, task3, task4;
     public Text subHeading1, subHeading2, subHeading3, subHeading4;
 
+    public GameObject endGameCanvas;
+
     DrinkSpawner drinkTask;
     RecordTask recordTask;
+
+    GameTimer timer;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +30,7 @@ public class UI : MonoBehaviour
 
         drinkTask = GameObject.Find("DrinkSpawn").GetComponent<DrinkSpawner>();
         recordTask = GameObject.Find("RecordSpawner").GetComponent<RecordTask>();
+        timer = GameObject.Find("Timer").GetComponent<GameTimer>();
     }
 
     // Update is called once per frame
@@ -42,5 +47,10 @@ public class UI : MonoBehaviour
 
         // Record Task
         subHeading4.text = "Play " + recordTask.recordName + " on the DJ decks";
+
+        if(timer.timer <= 0f)
+        {
+            endGameCanvas.SetActive(true);
+        }
     }
 }
