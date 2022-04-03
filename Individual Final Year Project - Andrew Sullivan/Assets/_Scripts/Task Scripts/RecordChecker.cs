@@ -11,7 +11,7 @@ public class RecordChecker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        record = GameObject.Find("RecordSpawner").GetComponent<RecordTask>();
+        record = GameObject.Find("TaskManager").GetComponent<RecordTask>();
         gameWin = GameObject.Find("WinSystem").GetComponent<GameWin>();
     }
 

@@ -28,7 +28,7 @@ public class AIScript : MonoBehaviour
         bar = GameObject.Find("BarPosition").GetComponent<Transform>();
         //playerTransform = GameObject.Find("Player").GetComponent<Transform>();
 
-        randChoice = Random.Range(0, 3);
+        randChoice = Random.Range(0, 2);
         //randChoice2 = Random.Range(0, 2);
     }
 

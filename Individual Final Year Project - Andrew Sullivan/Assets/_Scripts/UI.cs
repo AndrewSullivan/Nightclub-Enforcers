@@ -33,7 +33,7 @@ public class UI : MonoBehaviour
         //subHeading5.text = "";
 
         drinkTask = GameObject.Find("DrinkSpawn").GetComponent<DrinkSpawner>();
-        recordTask = GameObject.Find("RecordSpawner").GetComponent<RecordTask>();
+        recordTask = GameObject.Find("TaskManager").GetComponent<RecordTask>();
         timer = GameObject.Find("Timer").GetComponent<GameTimer>();
     }
 
@@ -43,7 +43,7 @@ public class UI : MonoBehaviour
         //aiScript = GameObject.Find("AI").GetComponent<AIScript>();
 
         // Bottle Clean Up Task
-        subHeading1.text = "Thrown away all bottles on the bar stool";
+        subHeading1.text = "Throw away all bottles on the bar stool";
 
         // Wet Floor Task
         subHeading2.text = "Cleaned up all the puddles";
@@ -52,7 +52,7 @@ public class UI : MonoBehaviour
         subHeading3.text = "Take " + drinkTask.chosenDrink.name + " to " + drinkTask.tableNum;
 
         // Record Task
-        subHeading4.text = "Play " + recordTask.recordName + " on the DJ decks";
+        subHeading4.text = "Play " + recordTask.chosenRecord.name + " on the DJ decks";
 
         /*// Fights
         subHeading5.text = "Stop " + aiScript.numOfFights + " fights";*/

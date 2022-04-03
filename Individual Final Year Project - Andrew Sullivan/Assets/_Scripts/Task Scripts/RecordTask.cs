@@ -5,6 +5,7 @@ using UnityEngine;
 public class RecordTask : MonoBehaviour
 {
     public GameObject[] records;
+    public GameObject[] spawns;
     public GameObject djDecks;
 
     public int randomRecord;
@@ -23,23 +24,24 @@ public class RecordTask : MonoBehaviour
     void SpawnRecords()
     {
         randomRecord = Random.Range(0, records.Length);
-        chosenRecord = Instantiate(records[randomRecord], transform.position, Quaternion.identity);
+        GameObject recordSpawn = spawns[Random.Range(0, spawns.Length)];
+        chosenRecord = Instantiate(records[randomRecord], recordSpawn.transform.position, Quaternion.identity);
 
         if(randomRecord == 0)
         {
-            recordName = "Blue Record";
+            chosenRecord.name = "Blue Record";
         }
         else if(randomRecord == 1)
         {
-            recordName = "Red Record";
+            chosenRecord.name = "Red Record";
         }
         else if (randomRecord == 2)
         {
-            recordName = "Green Record";
+            chosenRecord.name = "Green Record";
         }
         else if (randomRecord == 3)
         {
-            recordName = "Purple Record";
+            chosenRecord.name = "Purple Record";
         }
     }
 
