@@ -25,7 +25,8 @@ public class RecordTask : MonoBehaviour
     {
         randomRecord = Random.Range(0, records.Length);
         GameObject recordSpawn = spawns[Random.Range(0, spawns.Length)];
-        chosenRecord = Instantiate(records[randomRecord], recordSpawn.transform.position, Quaternion.identity);
+        Vector3 prefabSpawnRotation = new Vector3(-89.98f, 0f, 0f);
+        chosenRecord = Instantiate(records[randomRecord], recordSpawn.transform.position, Quaternion.Euler(prefabSpawnRotation));
 
         if(randomRecord == 0)
         {
