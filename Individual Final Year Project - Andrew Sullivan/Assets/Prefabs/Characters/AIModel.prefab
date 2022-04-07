@@ -1008,6 +1008,7 @@ GameObject:
   - component: {fileID: 3462351183158588822}
   - component: {fileID: -5669625230596484967}
   - component: {fileID: 7156143565047906127}
+  - component: {fileID: -2952582282371807260}
   m_Layer: 0
   m_Name: AIModel
   m_TagString: Untagged
@@ -1087,7 +1088,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6363115849894017431}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e60d39f6a7cf29a4382dff68027180a7, type: 3}
   m_Name: 
@@ -1117,6 +1118,27 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-2952582282371807260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6363115849894017431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3483f31ede594d3438d1e29bc26cf7a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiAgent: {fileID: 7156143565047906127}
+  attackSpacing: 0.5
+  attackBottle: {fileID: 2909141149624483576, guid: fc7f906a329fc8c47a2cb0c24b4e3c3b,
+    type: 3}
+  isPlayer:
+    serializedVersion: 2
+    m_Bits: 8
+  attackRange: 10
+  inAttackRange: 0
 --- !u!1 &6549935859816783832
 GameObject:
   m_ObjectHideFlags: 0
