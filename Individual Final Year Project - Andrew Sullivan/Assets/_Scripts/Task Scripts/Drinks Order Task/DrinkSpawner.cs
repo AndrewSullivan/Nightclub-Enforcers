@@ -56,7 +56,7 @@ public class DrinkSpawner : MonoBehaviour
         }
         else
         {
-            tableName = "Lime Green Table";
+            tableName = "Red Table";
             chosenTable = Instantiate(tables[randomTable], table2Pos.transform.position, Quaternion.identity);
             chosenTable.name = tableName;
         }
