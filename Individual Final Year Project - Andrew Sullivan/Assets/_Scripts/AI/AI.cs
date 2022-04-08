@@ -11,9 +11,9 @@ public class AI : MonoBehaviour
 
     Animator ai_AC;
 
-    bool isDrunk;
-
     public bool isFighting;
+
+    public bool isDrunk;
 
     public GameObject bar;
 
@@ -23,11 +23,15 @@ public class AI : MonoBehaviour
     public GameObject attackBottle;
 
     // Layer Masks
-    public LayerMask isPlayer;
+    public LayerMask isPlayer, isBar, isDanceFloor;
 
     // States
     public float attackRange;
     public bool inAttackRange;
+    public float barRadius;
+    public bool atBar;
+    public float danceFloorRadius;
+    public bool onDanceFloor;
 
     void Awake()
     {
@@ -35,13 +39,16 @@ public class AI : MonoBehaviour
         aiAgent = GetComponent<NavMeshAgent>();
         ai_AC = GetComponent<Animator>();
 
-        isDrunk = true;
     }
 
     void Update()
     {
         // Check if player is in view range and in attack range
         inAttackRange = Physics.CheckSphere(transform.position, attackRange, isPlayer);
+
+        atBar = Physics.CheckSphere(transform.position, barRadius, isBar);
+
+        onDanceFloor = Physics.CheckSphere(transform.position, danceFloorRadius, isDanceFloor);
 
         float distFromBar = Vector3.Distance(transform.position, bar.transform.position);
 
@@ -52,9 +59,20 @@ public class AI : MonoBehaviour
             aiAgent.SetDestination(bar.transform.position);
         }
 
-        if (inAttackRange)
+        if (atBar)
+        {
+            ai_AC.SetBool("isAtBar", true);
+            isDrunk = true;
+        }
+
+        if (inAttackRange && isDrunk)
         {
             Attack();
+        }
+
+        if (onDanceFloor)
+        {
+            ai_AC.SetBool("isDancing", true);
         }
     }
 
