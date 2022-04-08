@@ -22,7 +22,7 @@ public class CleanUpTask : MonoBehaviour
 
         gameWin = GameObject.Find("WinSystem").GetComponent<GameWin>();
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 4; i++)
         {
             randomBottle = Random.Range(0, bottles.Length);
             GameObject spawn = bottleSpawns[Random.Range(0, bottleSpawns.Count)];
@@ -38,7 +38,7 @@ public class CleanUpTask : MonoBehaviour
     {
         currentBottlesBinned = bottlesBinned;
 
-        if (bottlesBinned == 5)
+        if (bottlesBinned == 4)
         {
             Debug.Log("Congratulations, you have cleared up all the left over bottles!"); // If 5 bottles are dropped into the bin, it will send a message to the console.
             //uiScript.subHeading1.text = "Complete!";
