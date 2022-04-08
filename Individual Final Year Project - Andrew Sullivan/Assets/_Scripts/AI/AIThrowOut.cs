@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class AIThrowOut : MonoBehaviour
 {
-    AI ai;
+    AIBar aiBar;
 
     private void Awake()
     {
-        ai = GameObject.Find("AIModel").GetComponent<AI>();
+        aiBar = GameObject.Find("AIModel(Bar)").GetComponent<AIBar>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "AI" && ai.isFighting == true)
+        if(other.gameObject.tag == "AI" && aiBar.isFighting == true)
         {
             Destroy(other.gameObject);
         }
