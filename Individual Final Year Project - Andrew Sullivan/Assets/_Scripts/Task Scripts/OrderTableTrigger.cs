@@ -23,7 +23,7 @@ public class OrderTableTrigger : MonoBehaviour
         if(other.gameObject.tag == drink.chosenDrink.gameObject.tag)
         {
             Destroy(other.gameObject);
-            gameWin.tasksComplete++;
+            gameWin.tasksComplete = gameWin.tasksComplete + 1;
             taskCompleteEffect.Play();
             Debug.Log("Order Complete!");
         }

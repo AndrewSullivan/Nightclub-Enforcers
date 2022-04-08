@@ -2,36 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RecordChecker : MonoBehaviour
+public class PuddleTracker : MonoBehaviour
 {
-    RecordTask record;
 
-    GameWin gameWin;
+    public float puddlesCleaned;
 
     AudioSource taskCompleteEffect;
+
+    GameWin gameWin;
 
     // Start is called before the first frame update
     void Start()
     {
-        record = GameObject.Find("TaskManager").GetComponent<RecordTask>();
-        gameWin = GameObject.Find("WinSystem").GetComponent<GameWin>();
+        puddlesCleaned = 0;
         taskCompleteEffect = GameObject.Find("Task Complete Sound Effect").GetComponent<AudioSource>();
+        gameWin = GameObject.Find("WinSystem").GetComponent<GameWin>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == record.chosenRecord.gameObject.tag)
+        if(puddlesCleaned == 3)
         {
-            Destroy(other.gameObject);
             gameWin.tasksComplete = gameWin.tasksComplete + 1;
             taskCompleteEffect.Play();
-            Debug.Log("Playing correct record!");
+            Destroy(this); // This is to prevent it from constantly adding to the task complete value every millisecond.
         }
     }
 }

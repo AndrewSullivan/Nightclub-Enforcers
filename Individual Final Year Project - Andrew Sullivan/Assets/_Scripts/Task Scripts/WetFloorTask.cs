@@ -35,19 +35,12 @@ public class WetFloorTask : MonoBehaviour
         // Wet Floor Task
         distFromPlayer = Vector3.Distance(player.transform.position, this.transform.position);
 
-        if (distFromPlayer < 6f)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                numOfClicks++;
-            }
-            //Destroy(this.gameObject);
-        }
+        
 
         if (numOfClicks == 4)
         {
+            puddlesCleaned = puddlesCleaned + 1;
             Destroy(this.gameObject);
-            puddlesCleaned++;
         }
 
         if(numOfClicks == 1)

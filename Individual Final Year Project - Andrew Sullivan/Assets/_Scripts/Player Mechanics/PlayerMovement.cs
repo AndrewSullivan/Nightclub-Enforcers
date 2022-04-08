@@ -2,7 +2,7 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float playerSpeed = 5f;
+    public float playerSpeed = 8f;
     public float playerGravity = -9.81f;
 
     Vector3 playerVelocity;

@@ -13,7 +13,7 @@ public class GameTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = 60f;
+        timer = 90f;
     }
 
     // Update is called once per frame
