@@ -21,12 +21,4 @@ public class PlayerHealth : MonoBehaviour
             endGameCanvas.SetActive(true);
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "AI")
-        {
-            playerHealth = playerHealth - 10;
-        }
-    }
 }
