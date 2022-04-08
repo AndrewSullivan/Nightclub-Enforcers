@@ -13,7 +13,7 @@ public class PlayerLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; // Locks mouse pointer to the centre of the screen.
+        Cursor.lockState = CursorLockMode.Confined; // Locks mouse pointer to the centre of the screen.
     }
 
     // Update is called once per frame

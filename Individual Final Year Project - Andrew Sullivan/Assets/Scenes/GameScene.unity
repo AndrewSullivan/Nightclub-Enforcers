@@ -4859,7 +4859,7 @@ MonoBehaviour:
   - {fileID: 335435436}
   - {fileID: 476997594}
   timer: 1
-  delay: 10
+  delay: 5
 --- !u!4 &1632637976
 Transform:
   m_ObjectHideFlags: 0
