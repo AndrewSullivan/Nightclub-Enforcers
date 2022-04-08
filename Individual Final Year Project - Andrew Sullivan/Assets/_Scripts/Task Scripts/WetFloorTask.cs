@@ -17,10 +17,16 @@ public class WetFloorTask : MonoBehaviour
 
     bool complete;
 
+    AudioSource cleaningEffect;
+
+    AudioSource taskCompleteEffect;
+
     void Start()
     {
         player = GameObject.Find("Player");
         gameWin = GameObject.Find("WinSystem").GetComponent<GameWin>();
+        cleaningEffect = GameObject.Find("Cleaning Sound Effect").GetComponent<AudioSource>();
+        taskCompleteEffect = GameObject.Find("Task Complete Sound Effect").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -44,6 +50,11 @@ public class WetFloorTask : MonoBehaviour
             puddlesCleaned++;
         }
 
+        if(numOfClicks == 1)
+        {
+            cleaningEffect.Play();
+        }
+
         if(puddlesCleaned == 3)
         {
             complete = true;
@@ -52,6 +63,7 @@ public class WetFloorTask : MonoBehaviour
         if (complete == true)
         {
             gameWin.tasksComplete = gameWin.tasksComplete + 1;
+            taskCompleteEffect.Play();
             Destroy(this.gameObject); // This is to prevent it from constantly adding to the task complete value every millisecond.
         }
     }

@@ -8,11 +8,14 @@ public class RecordChecker : MonoBehaviour
 
     GameWin gameWin;
 
+    AudioSource taskCompleteEffect;
+
     // Start is called before the first frame update
     void Start()
     {
         record = GameObject.Find("TaskManager").GetComponent<RecordTask>();
         gameWin = GameObject.Find("WinSystem").GetComponent<GameWin>();
+        taskCompleteEffect = GameObject.Find("Task Complete Sound Effect").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +30,7 @@ public class RecordChecker : MonoBehaviour
         {
             Destroy(other.gameObject);
             gameWin.tasksComplete++;
+            taskCompleteEffect.Play();
             Debug.Log("Playing correct record!");
         }
     }

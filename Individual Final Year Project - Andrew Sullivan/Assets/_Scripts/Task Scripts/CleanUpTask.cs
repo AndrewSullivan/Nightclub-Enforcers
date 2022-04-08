@@ -11,6 +11,8 @@ public class CleanUpTask : MonoBehaviour
     public GameObject[] bottles;
     public List<GameObject> bottleSpawns = new List<GameObject>();
 
+    AudioSource taskCompleteEffect;
+    
     GameWin gameWin;
 
     //UI uiScript;
@@ -21,6 +23,7 @@ public class CleanUpTask : MonoBehaviour
         bottlesBinned = 0;
 
         gameWin = GameObject.Find("WinSystem").GetComponent<GameWin>();
+        taskCompleteEffect = GameObject.Find("Task Complete Sound Effect").GetComponent<AudioSource>();
 
         for (int i = 0; i < 4; i++)
         {
@@ -42,7 +45,8 @@ public class CleanUpTask : MonoBehaviour
         {
             Debug.Log("Congratulations, you have cleared up all the left over bottles!"); // If 5 bottles are dropped into the bin, it will send a message to the console.
             //uiScript.subHeading1.text = "Complete!";
-            gameWin.tasksComplete = gameWin.tasksComplete + 1; 
+            gameWin.tasksComplete = gameWin.tasksComplete + 1;
+            taskCompleteEffect.Play();
             Destroy(this.gameObject); // This is to prevent it from constantly adding to the task complete value every millisecond.
         }
     }

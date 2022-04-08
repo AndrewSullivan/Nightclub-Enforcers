@@ -8,17 +8,14 @@ public class OrderTableTrigger : MonoBehaviour
 
     GameWin gameWin;
 
+    AudioSource taskCompleteEffect;
+
     // Start is called before the first frame update
     void Start()
     {
         drink = GameObject.Find("DrinkSpawn").GetComponent<DrinkSpawner>();
         gameWin = GameObject.Find("WinSystem").GetComponent<GameWin>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        taskCompleteEffect = GameObject.Find("Task Complete Sound Effect").GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,6 +24,7 @@ public class OrderTableTrigger : MonoBehaviour
         {
             Destroy(other.gameObject);
             gameWin.tasksComplete++;
+            taskCompleteEffect.Play();
             Debug.Log("Order Complete!");
         }
     }
