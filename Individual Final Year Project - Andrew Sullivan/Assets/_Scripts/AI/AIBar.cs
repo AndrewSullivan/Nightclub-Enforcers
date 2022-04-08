@@ -19,6 +19,8 @@ public class AIBar : MonoBehaviour
 
     public GameObject bottleHolder;
 
+    public AudioSource shatterBottle;
+
     // AI Attack Variables
     public float attackSpacing;
     public bool hasAttacked;
@@ -74,6 +76,8 @@ public class AIBar : MonoBehaviour
             Rigidbody rb = Instantiate(attackBottle, bottleHolder.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             
             rb.AddForce(transform.forward * 24f, ForceMode.Impulse);
+
+            shatterBottle.Play();
 
             hasAttacked = true;
             Invoke("DelayAttack", attackSpacing);
