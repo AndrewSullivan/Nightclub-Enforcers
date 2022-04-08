@@ -48,7 +48,7 @@ public class UI : MonoBehaviour
         subHeading2.text = "Clean up all the puddles";
 
         // Drink Order Task
-        subHeading3.text = "Take the " + drinkTask.chosenDrink.name + " on the stool to " + drinkTask.tableNum;
+        subHeading3.text = "Take the " + drinkTask.chosenDrink.name + " on the stool to " + drinkTask.tableName;
 
         // Record Task
         subHeading4.text = "Play " + recordTask.chosenRecord.name + " on the DJ decks";

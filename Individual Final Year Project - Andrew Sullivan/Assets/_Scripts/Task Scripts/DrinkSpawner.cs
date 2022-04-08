@@ -9,7 +9,7 @@ public class DrinkSpawner : MonoBehaviour
 
     public int randomDrink;
     public GameObject chosenDrink;
-    public string tableNum;
+    public string tableName;
     public GameObject chosenTable;
     public GameObject table1Pos, table2Pos;
 
@@ -50,15 +50,15 @@ public class DrinkSpawner : MonoBehaviour
 
         if(randomTable == 0)
         {
-            tableNum = "Table 1";
+            tableName = "Yellow Table";
             chosenTable = Instantiate(tables[randomTable], table1Pos.transform.position, Quaternion.identity);
-            chosenTable.name = tableNum;
+            chosenTable.name = tableName;
         }
         else
         {
-            tableNum = "Table 2";
+            tableName = "Lime Green Table";
             chosenTable = Instantiate(tables[randomTable], table2Pos.transform.position, Quaternion.identity);
-            chosenTable.name = tableNum;
+            chosenTable.name = tableName;
         }
 
         Debug.Log("Take "+chosenDrink.name+" to "+chosenTable.name);

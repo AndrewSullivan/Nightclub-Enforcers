@@ -299,7 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11528158}
   m_Layer: 0
-  m_Name: LwrFloor_Table1
+  m_Name: YellowTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1349,7 +1349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 577, y: 0}
+  m_AnchoredPosition: {x: 675, y: 0}
   m_SizeDelta: {x: 559.7841, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &291108452
@@ -2133,7 +2133,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4b1834c47b748bb498a052cc1162c552, type: 2}
+  - {fileID: 2100000, guid: da8190ea485319f46bffceec8473808f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2615,7 +2615,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &699092979
 GameObject:
@@ -3107,7 +3107,7 @@ Transform:
   - {fileID: 66727450}
   - {fileID: 653404239}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &816113545
 GameObject:
@@ -3194,7 +3194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 816173342}
   m_Layer: 0
-  m_Name: LwrFloor_Table2
+  m_Name: LimeGreenTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3367,7 +3367,7 @@ MonoBehaviour:
   - {fileID: 5266527514118517469, guid: 660607126c971e849882b411d0f9ea86, type: 3}
   randomDrink: 0
   chosenDrink: {fileID: 0}
-  tableNum: 
+  tableName: 
   chosenTable: {fileID: 0}
   table1Pos: {fileID: 1539617391}
   table2Pos: {fileID: 1177009638}
@@ -3743,7 +3743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002588012}
   m_LocalRotation: {x: -0.7071069, y: -0, z: -3.5527137e-15, w: 0.70710677}
-  m_LocalPosition: {x: 27.88, y: 23.349342, z: -160.5}
+  m_LocalPosition: {x: 27.88, y: 24.01, z: -160.5}
   m_LocalScale: {x: 2.2997422, y: 4.1060166, z: 0.28435743}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4568,7 +4568,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 67d6ae13e94c0d44c87689211e9376e7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67d6ae13e94c0d44c87689211e9376e7,
         type: 3}
@@ -4637,7 +4637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1177009639}
   m_Layer: 0
-  m_Name: Table2Pos
+  m_Name: GreenTablePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5159,7 +5159,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9eddf28ed5c287740b8b6f4e12b88543, type: 2}
+  - {fileID: 2100000, guid: 06dd1644b24dc1e4bbdb707b3296ad24, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5598,7 +5598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1539617392}
   m_Layer: 0
-  m_Name: Table1Pos
+  m_Name: YellowTablePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6364,7 +6364,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9eddf28ed5c287740b8b6f4e12b88543, type: 2}
+  - {fileID: 2100000, guid: da8190ea485319f46bffceec8473808f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6537,7 +6537,7 @@ PrefabInstance:
     - target: {fileID: 2723538584308726401, guid: b57712261d13db24db4294d76b17c426,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2723538584308726401, guid: b57712261d13db24db4294d76b17c426,
         type: 3}
@@ -7071,7 +7071,7 @@ PrefabInstance:
     - target: {fileID: 2715961053613578832, guid: e5092d4659334f346bef1f1b39bbe304,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2715961053613578832, guid: e5092d4659334f346bef1f1b39bbe304,
         type: 3}
@@ -7192,7 +7192,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4b1834c47b748bb498a052cc1162c552, type: 2}
+  - {fileID: 2100000, guid: 06dd1644b24dc1e4bbdb707b3296ad24, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24127,7 +24127,7 @@ Transform:
   - {fileID: 2776271500555057237}
   - {fileID: 36082782}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &7715219855019857799
 MeshFilter:

@@ -48,6 +48,6 @@ public class RecordTask : MonoBehaviour
 
     void SpawnDecksTrigger()
     {
-        djDecks = Instantiate(decksTrigger, decksPos.transform.position, Quaternion.identity);
+        djDecks = Instantiate(decksTrigger, decksPos.transform.position, Quaternion.Euler(-90,0,0));
     }
 }
