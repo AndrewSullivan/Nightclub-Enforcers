@@ -15,6 +15,8 @@ public class AI : MonoBehaviour
 
     public bool isFighting;
 
+    public GameObject bar;
+
     // AI Attack Variables
     public float attackSpacing;
     bool hasAttacked;
@@ -41,9 +43,16 @@ public class AI : MonoBehaviour
         // Check if player is in view range and in attack range
         inAttackRange = Physics.CheckSphere(transform.position, attackRange, isPlayer);
 
-        ai_AC.SetFloat("DistFromBar", 0f);
+        float distFromBar = Vector3.Distance(transform.position, bar.transform.position);
 
-        if (inAttackRange && isDrunk)
+        ai_AC.SetFloat("DistFromBar", distFromBar);
+
+        if(distFromBar < 6)
+        {
+            aiAgent.SetDestination(bar.transform.position);
+        }
+
+        if (inAttackRange)
         {
             Attack();
         }
@@ -56,6 +65,8 @@ public class AI : MonoBehaviour
         transform.LookAt(player); // Makes the AI face towards the player when it is attacking.
 
         isFighting = true;
+
+        ai_AC.SetBool("isThrowing", true);
 
         if (!hasAttacked)
         {
@@ -72,5 +83,6 @@ public class AI : MonoBehaviour
     void DelayAttack()
     {
         hasAttacked = false;
+        ai_AC.SetBool("isThrowing", false);
     }
 }
