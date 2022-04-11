@@ -23,11 +23,12 @@ public class RecordTask : MonoBehaviour
 
     void SpawnRecords()
     {
-        randomRecord = Random.Range(0, records.Length);
-        GameObject recordSpawn = spawns[Random.Range(0, spawns.Length)];
+        randomRecord = Random.Range(0, records.Length); // Randomly chooses a record.
+        GameObject recordSpawn = spawns[Random.Range(0, spawns.Length)]; // Chooses a random spawn position.
         Vector3 prefabSpawnRotation = new Vector3(-89.98f, 0f, 0f);
-        chosenRecord = Instantiate(records[randomRecord], recordSpawn.transform.position, Quaternion.Euler(prefabSpawnRotation));
+        chosenRecord = Instantiate(records[randomRecord], recordSpawn.transform.position, Quaternion.Euler(prefabSpawnRotation)); // Instantiates the chosen record in the chosen position.
 
+        // Set's the name of the chosen record to the appropriate name.
         if(randomRecord == 0)
         {
             chosenRecord.name = "Blue Record";
@@ -48,6 +49,6 @@ public class RecordTask : MonoBehaviour
 
     void SpawnDecksTrigger()
     {
-        djDecks = Instantiate(decksTrigger, decksPos.transform.position, Quaternion.Euler(-90,0,0));
+        djDecks = Instantiate(decksTrigger, decksPos.transform.position, Quaternion.Euler(-90,0,0)); // Instantiates an empty game object with a trigger attached in the position of the dj decks.
     }
 }

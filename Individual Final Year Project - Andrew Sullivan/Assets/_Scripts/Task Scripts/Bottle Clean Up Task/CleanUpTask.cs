@@ -7,7 +7,7 @@ public class CleanUpTask : MonoBehaviour
 {
     public int bottlesBinned, currentBottlesBinned;
     public int numOfBottles;
-    int randomBottle, randomSpawn;
+    int randomBottle;
     public GameObject[] bottles;
     public List<GameObject> bottleSpawns = new List<GameObject>();
 
@@ -27,13 +27,11 @@ public class CleanUpTask : MonoBehaviour
 
         for (int i = 0; i < 4; i++)
         {
-            randomBottle = Random.Range(0, bottles.Length);
-            GameObject spawn = bottleSpawns[Random.Range(0, bottleSpawns.Count)];
+            randomBottle = Random.Range(0, bottles.Length); // Chooses a random drink bottle.
+            GameObject spawn = bottleSpawns[Random.Range(0, bottleSpawns.Count)]; // Chooses a random spawn position.
             Instantiate(bottles[randomBottle], spawn.transform.position, Quaternion.identity);
-            Destroy(spawn.gameObject);
+            Destroy(spawn.gameObject); // This prevents the same spawn position from being used again.
         }
-
-        //uiScript = GameObject.FindGameObjectWithTag("UI").GetComponent<UI>();
     }
 
     // Update is called once per frame
@@ -44,7 +42,6 @@ public class CleanUpTask : MonoBehaviour
         if (bottlesBinned == 4)
         {
             Debug.Log("Congratulations, you have cleared up all the left over bottles!"); // If 5 bottles are dropped into the bin, it will send a message to the console.
-            //uiScript.subHeading1.text = "Complete!";
             gameWin.tasksComplete = gameWin.tasksComplete + 1;
             taskCompleteEffect.Play();
             Destroy(this.gameObject); // This is to prevent it from constantly adding to the task complete value every millisecond.

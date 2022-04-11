@@ -22,8 +22,8 @@ public class DrinkSpawner : MonoBehaviour
 
     void SpawnDrinks()
     {
-        randomDrink = Random.Range(0, drinks.Length);
-        chosenDrink = Instantiate(drinks[randomDrink], transform.position, Quaternion.identity);
+        randomDrink = Random.Range(0, drinks.Length); // Chooses a random drink
+        chosenDrink = Instantiate(drinks[randomDrink], transform.position, Quaternion.identity); // Instantiates the chosen drink.
 
         // These if statements below have been added to aid the task UI.
         if(randomDrink == 0)
@@ -46,21 +46,20 @@ public class DrinkSpawner : MonoBehaviour
 
     void ChooseTable()
     {
-        int randomTable = Random.Range(0, tables.Length);
+        int randomTable = Random.Range(0, tables.Length); // Chooses a random table position.
 
         if(randomTable == 0)
         {
             tableName = "Yellow Table";
-            chosenTable = Instantiate(tables[randomTable], table1Pos.transform.position, Quaternion.identity);
+            chosenTable = Instantiate(tables[randomTable], table1Pos.transform.position, Quaternion.identity); // Instantiates an empty game object with a trigger attached in the chosen table position.
             chosenTable.name = tableName;
         }
         else
         {
             tableName = "Red Table";
-            chosenTable = Instantiate(tables[randomTable], table2Pos.transform.position, Quaternion.identity);
+            chosenTable = Instantiate(tables[randomTable], table2Pos.transform.position, Quaternion.identity); // Instantiates an empty game object with a trigger attached in the chosen table position.
             chosenTable.name = tableName;
         }
 
-        Debug.Log("Take "+chosenDrink.name+" to "+chosenTable.name);
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class AIDancing : MonoBehaviour
 {
-    public NavMeshAgent aiAgent;
 
     public Animator ai_AC;
 
@@ -18,17 +17,17 @@ public class AIDancing : MonoBehaviour
 
     void Awake()
     {
-        aiAgent = GetComponent<NavMeshAgent>();
         ai_AC = GetComponent<Animator>();
     }
 
     void Update()
     {
+        // Checks if its on the dance floor.
         onDanceFloor = Physics.CheckSphere(transform.position, danceFloorRadius, isDanceFloor);
 
         if (onDanceFloor)
         {
-            ai_AC.SetBool("isDancing", true);
+            ai_AC.SetBool("isDancing", true); // Set's the animator parameter "isDancing" to be true.
         }
     }
 }

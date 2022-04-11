@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BottleCleanUp : MonoBehaviour
+public class BinSpawn : MonoBehaviour
 {
 
     // Bottle Clean Up Task 

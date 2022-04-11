@@ -44,14 +44,15 @@ public class AIBar : MonoBehaviour
 
     void Update()
     {
-        // Check if player is in view range and in attack range
+        // Checks if player is in view range and in attack range.
         inAttackRange = Physics.CheckSphere(transform.position, attackRange, isPlayer);
 
+        // Checks if player is at the bar.
         atBar = Physics.CheckSphere(transform.position, barRadius, isBar);
 
         if (atBar)
         {
-            ai_AC.SetBool("isAtBar", true);
+            ai_AC.SetBool("isAtBar", true); // Set's animator paramter "isAtBar" to be true.
             isDrunk = true;
         }
 
@@ -69,24 +70,24 @@ public class AIBar : MonoBehaviour
 
         isFighting = true;
 
-        ai_AC.SetBool("isThrowing", true);
+        ai_AC.SetBool("isThrowing", true); // Set's animator parameter "isThrowing" to be true.
 
         if (!hasAttacked)
         {
-            Rigidbody rb = Instantiate(attackBottle, bottleHolder.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            Rigidbody aiRb = Instantiate(attackBottle, bottleHolder.transform.position, Quaternion.identity).GetComponent<Rigidbody>(); // Instanties bottle game object with a rigidbody in the position of the bottleHolder game object.
             
-            rb.AddForce(transform.forward * 24f, ForceMode.Impulse);
+            aiRb.AddForce(transform.forward * 24f, ForceMode.Impulse); // Adds a forward force to the bottle so it goes towards the player.
 
-            shatterBottle.Play();
+            shatterBottle.Play(); // Plays the audio source for bottle shattering sound effect.
 
             hasAttacked = true;
-            Invoke("DelayAttack", attackSpacing);
+            Invoke("DelayAttack", attackSpacing); // Executes the DelayAttack function with a delay.
         }
     }
 
     void DelayAttack()
     {
         hasAttacked = false;
-        ai_AC.SetBool("isThrowing", false);
+        ai_AC.SetBool("isThrowing", false); // Set's animator paramter "isThrowing" to be false.
     }
 }

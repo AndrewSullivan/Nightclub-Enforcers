@@ -24,8 +24,8 @@ public class PuddleTracker : MonoBehaviour
     {
         if(puddlesCleaned == 3)
         {
-            gameWin.tasksComplete = gameWin.tasksComplete + 1;
-            taskCompleteEffect.Play();
+            gameWin.tasksComplete = gameWin.tasksComplete + 1; // Increments the tasks complete variable in Game Win script by 1.
+            taskCompleteEffect.Play(); // Play's task complete sound effect.
             Destroy(this); // This is to prevent it from constantly adding to the task complete value every millisecond.
         }
     }

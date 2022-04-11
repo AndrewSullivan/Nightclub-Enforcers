@@ -11,35 +11,30 @@ public class UI : MonoBehaviour
     public GameObject endGameCanvas;
 
     DrinkSpawner drinkTask;
-    OrderTableTrigger drinkOrder;
     RecordTask recordTask;
 
     GameTimer timer;
+    GameWin gameWin;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Set's the task title text objects to each task.
         task1.text = "Bottle Clean Up Task";
         task2.text = "Wet Floor Task";
         task3.text = "Drinks Order Task";
         task4.text = "Vinyl Record Task";
         task5.text = "Drunk Customer";
 
-        subHeading1.text = "";
-        subHeading2.text = "";
-        subHeading3.text = "";
-        subHeading4.text = "";
-        subHeading5.text = "";
-
-        drinkTask = GameObject.Find("DrinkSpawn").GetComponent<DrinkSpawner>();
-        recordTask = GameObject.Find("TaskManager").GetComponent<RecordTask>();
-        timer = GameObject.Find("Timer").GetComponent<GameTimer>();
+        drinkTask = GameObject.Find("DrinkSpawn").GetComponent<DrinkSpawner>(); // Get's the Drink Spawner script.
+        recordTask = GameObject.Find("TaskManager").GetComponent<RecordTask>(); // Get's the Record Task script.
+        timer = GameObject.Find("Timer").GetComponent<GameTimer>(); // Get's the Game Timer script.
+        gameWin = GameObject.Find("WinSystem").GetComponent<GameWin>(); // Get's the Game Win Script.
     }
 
     // Update is called once per frame
     void Update()
     {
-        //aiScript = GameObject.Find("AI").GetComponent<AIScript>();
 
         // Bottle Clean Up Task
         subHeading1.text = "Throw away the empty bottles around the club";
@@ -56,7 +51,8 @@ public class UI : MonoBehaviour
         // Drunk Customer
         subHeading5.text = "Throw out drunk customer";
 
-        if(timer.timer <= 0f)
+        // If the timer is equal to 0, it will display the End Game Canvas game object to show the player they have lost.
+        if(timer.timer <= 0f && gameWin.tasksComplete != 4)
         {
             endGameCanvas.SetActive(true);
         }
