@@ -47,6 +47,7 @@ public class AIPickUp : MonoBehaviour
             aiBar_AC.SetBool("isPickedUp", true);
             aiBar_AC.SetBool("isThrowing", false);
             aiBar.aiAgent.SetDestination(transform.position);
+            this.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
         }
     }
 

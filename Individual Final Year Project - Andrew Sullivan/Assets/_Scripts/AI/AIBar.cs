@@ -64,7 +64,6 @@ public class AIBar : MonoBehaviour
 
     void Attack()
     {
-        aiAgent.SetDestination(transform.position); // Stops the AI character from moving when attacking.
 
         transform.LookAt(player); // Makes the AI face towards the player when it is attacking.
 
